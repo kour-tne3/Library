@@ -37,7 +37,11 @@ p {
 }
 
 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  
 }
 
 a:hover {
@@ -101,8 +105,6 @@ li {
   display: none;
 }
 
-
-
 .menu__backdrop {
   position: absolute;
   background-color: #242424;
@@ -114,13 +116,12 @@ li {
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  display:none;
+  display: none;
 }
 
 .menu--open .menu__backdrop {
-  display:flex;
+  display: flex;
 }
-
 
 .menu__links {
   display: flex;
@@ -129,13 +130,12 @@ li {
 }
 
 .menu__list {
-padding: 32px 0;
+  padding: 32px 0;
 }
 
 .menu__link {
-font-size: 40px;
-color:white;
-
+  font-size: 40px;
+  color: white;
 }
 .btn__menu--close {
   position: absolute;
@@ -267,6 +267,7 @@ button:active {
 
 .highlight__wrapper {
   display: flex;
+  flex-wrap:wrap;
   justify-content: center;
   align-items: center;
 }
@@ -275,7 +276,7 @@ button:active {
   padding: 0 24px;
   width: calc(100% / 3);
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   flex-direction: column;
   position: relative;
 }
@@ -402,12 +403,14 @@ footer {
 }
 
 .footer__list {
-  margin-bottom: 0px 20px 0 24px;
+  margin-bottom:  20px;
 }
 
 .footer__link {
   padding: 0 8px;
 }
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 
 
 @media (max-width: 768px) {
@@ -417,11 +420,52 @@ footer {
   nav {
     height: 60px;
   }
+  .btn__menu {
+    display: flex;
+  }
+  .nav_links {
+    visibility: hidden;
+  }
+  .highlight__wrapper{
+    flex-direction: column;
+  }
+  .books{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .book__img {
+    padding: 50px;
+  }
+  .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .highlight__para {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
 }
 
+/* SMALL PHONES, LARGE SMARTPHONES */
 
 @media (max-width: 550px) {
   .nav__links {
-    display:none;
+    display: none;
+  }
+  .highlight {
+    width:100%;
+    margin-bottom: 30px 0;
+  }
+  .highlight__para {
+    margin-bottom: 30px;
+  }
+  .header__desciption {
+    width: 100%;
+    padding: 0 20px;
   }
 }
